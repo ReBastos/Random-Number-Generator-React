@@ -1,24 +1,24 @@
-import logo from './logo.svg';
+
 import './App.css';
+import { useState } from 'react';
+import random from './utils/random';
+import NumberInput from './components/NumberInput';
 
 function App() {
+  const [randomNumber, setRandomNumber] = useState(null);
+  const [number1, setNumber1] = useState(0);
+  const [number2, setNumber2] = useState(0);
+  
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <>
+    <h1 id='title'>Random Number Generator</h1>
+    <div className='inputsContainer'>
+    <NumberInput id='min' setNumber={setNumber1} placeholder={'Min.'}/>
+    <NumberInput id='max' setNumber={setNumber2} placeholder={'Max.'}/>
+    <button id='generate' onClick={() => {setRandomNumber(random(number1,number2));}}>Generate</button>
     </div>
+    <span>{Math.round(randomNumber)}</span>
+    </>
   );
 }
 

@@ -1,0 +1,47 @@
+@import './_partial'
+
+body
+    width: 100vw
+    height: 100vh
+    margin: 0
+    display: flex
+    flex-direction: column
+    justify-content: center
+    align-items: center
+    @include flexCenter
+    
+    
+#root
+    @include flexCenter
+    flex-direction: column
+    gap: 50px
+    
+
+#title
+    border: none
+    
+    width: 700px
+    height: 75px
+    @include boxOutset
+    @include flexCenter
+    
+    
+.inputsContainer
+    width: 250px
+    @include flexCenter
+    flex-wrap: wrap
+    gap: 20px
+    @include boxOutset
+    padding: 15px
+    
+    
+    
+    
+#generate
+    @include boxOutset
+    border: none
+    width: 130px
+    height: 50px
+    background-color: white
+    font-size: 24px
+    color: gray
