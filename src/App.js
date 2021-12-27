@@ -12,12 +12,13 @@ function App() {
   return (
     <>
     <h1 id='title'>Random Number Generator</h1>
+    <span id='result'>{Math.round(randomNumber)}</span>
     <div className='inputsContainer'>
     <NumberInput id='min' setNumber={setNumber1} placeholder={'Min.'}/>
     <NumberInput id='max' setNumber={setNumber2} placeholder={'Max.'}/>
     <button id='generate' onClick={() => {setRandomNumber(random(number1,number2));}}>Generate</button>
     </div>
-    <span>{Math.round(randomNumber)}</span>
+    
     </>
   );
 }

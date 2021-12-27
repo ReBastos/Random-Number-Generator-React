@@ -14,7 +14,7 @@ body
 #root
     @include flexCenter
     flex-direction: column
-    gap: 50px
+    gap: 30px
     
 
 #title
@@ -25,6 +25,13 @@ body
     @include boxOutset
     @include flexCenter
     
+#result
+    @include boxOutset
+    @include flexCenter
+    width: 100px
+    height: 70px
+    font-size: 20px
+    font-weight: bold
     
 .inputsContainer
     width: 250px
@@ -34,14 +41,11 @@ body
     @include boxOutset
     padding: 15px
     
-    
-    
-    
 #generate
     @include boxOutset
     border: none
     width: 130px
     height: 50px
     background-color: white
-    font-size: 24px
+    font-size: 20px
     color: gray
